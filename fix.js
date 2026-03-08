@@ -1,0 +1,1 @@
+const fs = require("fs"); let content = fs.readFileSync("script.js", "utf8"); content = content.replace("    },\r\n        brand: \"Opel\",\r\n        model: \"Astra (K)\",", "    },\r\n    {\r\n        brand: \"Opel\",\r\n        model: \"Astra (K)\","); fs.writeFileSync("script.js", content);

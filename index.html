@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kroniği BUL | Araç Kronik Sorunları ve Bilinen Arızalar</title>
+    <meta name="description"
+        content="Alacağınız veya mevcut aracınızın kronik sorunlarını, bilinen arızalarını ve motor/şanzıman bazlı problemlerini keşfedin. VW, BMW, Toyota, Renault, Ford ve daha fazlası.">
+    <meta name="keywords"
+        content="araç kronik sorunları, araba arızaları, ikinci el araç, DSG arızası, motor sorunları, şanzıman problemi, VW sorunları, BMW arızaları, Türkiye">
+    <meta name="author" content="KronigiBUL">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph (Sosyal Medya Paylaşımı) -->
+    <meta property="og:title" content="Kroniği BUL | Araç Kronik Sorunları">
+    <meta property="og:description"
+        content="Araçların gizli kalmış hastalıklarını keşfedin. Motor, şanzıman ve kasa bazlı kronik arızalar.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:image" content="https://kronigi.bul/og-image.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kroniği BUL | Araç Kronik Sorunları">
+    <meta name="twitter:description" content="Araçların gizli kalmış hastalıklarını keşfedin.">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ef4444">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-top-row">
+            <div class="logo" id="logoBtn" style="cursor:pointer;" tabindex="0" role="button"
+                aria-label="Ana Sayfaya Dön ve Filtreleri Sıfırla">
+                Kroniği<span class="accent">BUL</span></div>
+            <div class="header-actions">
+                <button id="randomBtn" class="header-action-btn" aria-label="Rastgele Araç"
+                    title="Rastgele Araç">🎲</button>
+                <button id="themeToggle" class="theme-toggle" aria-label="Tema Değiştir" title="Açık/Koyu Tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+        <p>Alacağınız aracın veya mevcut arabanızın gizli kalmış hastalıklarını keşfedin.</p>
+        <div class="filters-container">
+            <div class="select-wrapper">
+                <select id="brandFilter" aria-label="Marka Filtresi">
+                    <option value="">Tüm Markalar</option>
+                </select>
+            </div>
+            <div class="select-wrapper">
+                <select id="modelFilter" disabled aria-label="Model Filtresi">
+                    <option value="">Model Seçin (Kasa Kodu)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="filters-container secondary-filters">
+            <div class="select-wrapper">
+                <select id="engineFilter" disabled aria-label="Motor Tipi Filtresi">
+                    <option value="">Motor</option>
+                </select>
+            </div>
+            <div class="select-wrapper">
+                <select id="transmissionFilter" disabled aria-label="Şanzıman Filtresi">
+                    <option value="">Şanzıman / Tümü</option>
+                </select>
+            </div>
+            <div class="select-wrapper">
+                <select id="yearFilter" aria-label="Yıl Filtresi">
+                    <option value="">Yıl</option>
+                </select>
+            </div>
+            <div class="select-wrapper">
+                <select id="sortFilter" aria-label="Sıralama">
+                    <option value="default">Sırala ↕</option>
+                    <option value="problems-desc">En Çok Sorunlu ↓</option>
+                    <option value="problems-asc">En Az Sorunlu ↑</option>
+                    <option value="critical-desc">En Çok Kritik ↓</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="veya kelime arayın (örn: DSG, göçük)..."
+                aria-label="Arama">
+        </div>
+
+        <div id="resultCount" class="result-count" aria-live="polite"></div>
+    </header>
+
+    <!-- İstatistik Kartları -->
+    <section class="stats-section" id="statsSection">
+        <div class="stat-card">
+            <span class="stat-icon">🚗</span>
+            <span class="stat-value" id="statTotalCars">0</span>
+            <span class="stat-label">Araç</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-icon">⚙️</span>
+            <span class="stat-value" id="statTotalProblems">0</span>
+            <span class="stat-label">Toplam Sorun</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-icon">🔴</span>
+            <span class="stat-value" id="statCriticalProblems">0</span>
+            <span class="stat-label">Kritik Sorun</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-icon">🏆</span>
+            <span class="stat-value" id="statTopBrand">-</span>
+            <span class="stat-label">En Sorunlu Marka</span>
+        </div>
+    </section>
+
+    <main>
+        <section class="cars-grid" id="carsGrid" aria-label="Araç Listesi">
+            <!-- Araç kartları buraya JS ile yüklenecek -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Kroniği<span class="accent">BUL</span></div>
+            <p>Bu platform, araç sahiplerinin ve ustaların tecrübelerine dayanan verileri derlemektedir. Kesinlik ifade
+                etmez.</p>
+            <p>&copy; 2026 KroniğiBUL. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Sorun Detayları için Modal (Açılır Pencere) -->
+    <div id="problemModal" class="modal" role="dialog" aria-modal="true" aria-label="Araç Sorun Detayları">
+        <div class="modal-content">
+            <span class="close-btn" role="button" tabindex="0" aria-label="Kapat">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Karşılaştırma Çubuğu -->
+    <div id="compareBar" class="compare-bar">
+        <span id="compareCount">0 araç seçildi</span>
+        <button id="compareBtn" class="compare-action-btn" disabled>Karşılaştır</button>
+        <button id="compareClearBtn" class="compare-clear-btn">Temizle</button>
+    </div>
+
+    <!-- Karşılaştırma Modalı -->
+    <div id="compareModal" class="modal" role="dialog" aria-modal="true" aria-label="Araç Karşılaştırma">
+        <div class="modal-content compare-modal-content">
+            <span class="close-btn compare-close-btn" role="button" tabindex="0" aria-label="Kapat">&times;</span>
+            <div id="compareBody"></div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Yukarı Çık" title="Yukarı Çık">↑</button>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => { });
+        }
+    </script>
+</body>
+
+</html>
