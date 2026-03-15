@@ -40,20 +40,97 @@ let compareList = [];
 // BRAND LOGOS (Simple SVG)
 // ==============================
 const BRAND_LOGOS = {
-    'Volkswagen': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M10 13l10 16 10-16M10 27l10-16 10 16" fill="none" stroke="currentColor" stroke-width="2"/></svg>`,
-    'BMW': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="2" x2="20" y2="38" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="20" x2="38" y2="20" stroke="currentColor" stroke-width="1.5"/><text x="20" y="14" text-anchor="middle" font-size="7" font-weight="700" fill="currentColor">BMW</text></svg>`,
-    'Honda': `<svg class="brand-logo" viewBox="0 0 40 40"><text x="20" y="26" text-anchor="middle" font-size="16" font-weight="800" fill="currentColor">H</text></svg>`,
-    'Renault': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M20 4L6 20l14 16 14-16z" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>`,
-    'Peugeot': `<svg class="brand-logo" viewBox="0 0 40 40"><text x="20" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor">P</text><line x1="12" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="2"/></svg>`,
-    'Skoda': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 18c4 6 12 6 16 0" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="15" cy="15" r="2" fill="currentColor"/></svg>`,
-    'Toyota': `<svg class="brand-logo" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="18" ry="12" fill="none" stroke="currentColor" stroke-width="2"/><ellipse cx="20" cy="20" rx="8" ry="18" fill="none" stroke="currentColor" stroke-width="2"/></svg>`,
-    'Fiat': `<svg class="brand-logo" viewBox="0 0 40 40"><rect x="4" y="8" width="32" height="24" rx="12" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="25" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor">FIAT</text></svg>`,
-    'Ford': `<svg class="brand-logo" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="18" ry="11" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="24" text-anchor="middle" font-size="11" font-style="italic" font-weight="700" fill="currentColor">Ford</text></svg>`,
-    'Opel': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/><line x1="6" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="2.5"/><path d="M6 20 C6 20 20 10 34 20" fill="none" stroke="currentColor" stroke-width="2"/></svg>`,
-    'Hyundai': `<svg class="brand-logo" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="18" ry="12" fill="none" stroke="currentColor" stroke-width="2"/><text x="20" y="25" text-anchor="middle" font-size="16" font-weight="800" font-style="italic" fill="currentColor">H</text></svg>`,
-    'Dacia': `<svg class="brand-logo" viewBox="0 0 40 40"><rect x="5" y="10" width="30" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="20" y="25" text-anchor="middle" font-size="9" font-weight="700" fill="currentColor">DACIA</text></svg>`,
-    'Seat': `<svg class="brand-logo" viewBox="0 0 40 40"><text x="20" y="27" text-anchor="middle" font-size="11" font-weight="800" fill="currentColor">SEAT</text><line x1="8" y1="12" x2="32" y2="12" stroke="currentColor" stroke-width="2"/></svg>`,
-    'Nissan': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/><rect x="4" y="16" width="32" height="8" fill="var(--card-bg)" stroke="currentColor" stroke-width="2"/><text x="20" y="23" text-anchor="middle" font-size="7" font-weight="700" fill="currentColor">NISSAN</text></svg>`,
+    // Volkswagen - VW interlocking letters in circle
+    'Volkswagen': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="0.8"/><path d="M12.5 10 L20 28 L27.5 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9.5 10 L16.5 22 M23.5 22 L30.5 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>`,
+
+    // BMW - Quartered circle with BMW text
+    'BMW': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="currentColor" stroke-width="0.8"/><line x1="20" y1="5.5" x2="20" y2="34.5" stroke="currentColor" stroke-width="0.8"/><line x1="5.5" y1="20" x2="34.5" y2="20" stroke="currentColor" stroke-width="0.8"/><text x="20" y="8.5" text-anchor="middle" font-size="4.5" font-weight="800" fill="currentColor" letter-spacing="0.5">BMW</text></svg>`,
+
+    // Honda - Bold H badge
+    'Honda': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M10 8 L10 32 L14 32 L14 22 L26 22 L26 32 L30 32 L30 8 L26 8 L26 18 L14 18 L14 8 Z" fill="currentColor"/></svg>`,
+
+    // Renault - Diamond
+    'Renault': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M20 3 L7 20 L20 37 L33 20 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 9 L12 20 L20 31 L28 20 Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>`,
+
+    // Peugeot - Standing lion silhouette (simplified)
+    'Peugeot': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M20 4 C20 4 15 8 15 14 C15 18 17 20 18 22 L14 32 L18 32 L20 26 L22 32 L26 32 L22 22 C23 20 25 18 25 14 C25 8 20 4 20 4 Z" fill="currentColor"/><line x1="12" y1="35" x2="28" y2="35" stroke="currentColor" stroke-width="1.5"/></svg>`,
+
+    // Skoda - Winged arrow
+    'Skoda': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 22 C14 14 20 11 26 14 L30 10 L18 16 L10 22 Z" fill="currentColor"/><circle cx="25" cy="15" r="1.5" fill="currentColor"/></svg>`,
+
+    // Toyota - Triple ellipses
+    'Toyota': `<svg class="brand-logo" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="18" ry="11" fill="none" stroke="currentColor" stroke-width="1.8"/><ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="currentColor" stroke-width="1.8"/><ellipse cx="20" cy="17" rx="4" ry="7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`,
+
+    // Fiat - Letters in rounded rectangle
+    'Fiat': `<svg class="brand-logo" viewBox="0 0 40 40"><rect x="3" y="8" width="34" height="24" rx="12" fill="none" stroke="currentColor" stroke-width="2"/><text x="20" y="24.5" text-anchor="middle" font-size="10" font-weight="700" font-family="serif" fill="currentColor" letter-spacing="1.5">FIAT</text></svg>`,
+
+    // Ford - Oval with script text
+    'Ford': `<svg class="brand-logo" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="18" ry="11" fill="none" stroke="currentColor" stroke-width="2.2"/><text x="20" y="24" text-anchor="middle" font-size="11.5" font-style="italic" font-weight="600" font-family="serif" fill="currentColor">Ford</text></svg>`,
+
+    // Opel - Lightning bolt in circle
+    'Opel': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 20 L34 20" stroke="currentColor" stroke-width="2"/><path d="M8 17 Q20 8 32 17" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>`,
+
+    // Hyundai - Slanted H in oval
+    'Hyundai': `<svg class="brand-logo" viewBox="0 0 40 40"><ellipse cx="20" cy="20" rx="18" ry="13" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 28 L16 12 M16 12 Q20 22 24 12 M24 12 L28 28" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M14 20 Q20 26 26 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>`,
+
+    // Dacia - New modern linked D
+    'Dacia': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M5 12 L14 12 L14 28 L5 28 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="miter"/><path d="M14 12 L26 12 C32 12 35 16 35 20 C35 24 32 28 26 28 L14 28" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`,
+
+    // Seat - S with horizontal line
+    'Seat': `<svg class="brand-logo" viewBox="0 0 40 40"><text x="20" y="27" text-anchor="middle" font-size="10.5" font-weight="800" letter-spacing="2" fill="currentColor">SEAT</text><path d="M6 11 L20 11 L34 11" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M6 33 L34 33" fill="none" stroke="currentColor" stroke-width="1"/></svg>`,
+
+    // Nissan - Bar through circle
+    'Nissan': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2"/><rect x="4" y="16" width="32" height="8" rx="1" fill="var(--card-bg-solid, #1e293b)" stroke="currentColor" stroke-width="1.5"/><text x="20" y="23" text-anchor="middle" font-size="6.5" font-weight="800" fill="currentColor" letter-spacing="0.8">NISSAN</text></svg>`,
+
+    // Kia - Modern angular KIA
+    'Kia': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M5 28 L5 12 L10 12 L10 18 L18 12 L24 12 L14 20 L24 28 L18 28 L10 22 L10 28 Z" fill="currentColor"/><rect x="26" y="12" width="4" height="16" fill="currentColor"/><path d="M32 12 L39 12 L36.5 20 L39 28 L32 28 L34.5 20 Z" fill="currentColor"/></svg>`,
+
+    // Audi - Four interlocking rings
+    'Audi': `<svg class="brand-logo" viewBox="0 0 44 40"><circle cx="8" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="28" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="36" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>`,
+
+    // Mercedes-Benz - Three-pointed star in circle
+    'Mercedes-Benz': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="currentColor" stroke-width="0.6"/><path d="M20 6 L20 20 L8.5 32 M20 20 L31.5 32" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>`,
+
+    // Citroën - Double chevron
+    'Citroën': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M10 15 L20 5 L30 15" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 27 L20 17 L30 27" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/></svg>`,
+
+    // Cupra - Tribal angular shape
+    'Cupra': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M6 30 L20 6 L34 30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M13 30 L20 16 L27 30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+
+    // Volvo - Iron symbol (circle with arrow)
+    'Volvo': `<svg class="brand-logo" viewBox="0 0 40 40"><circle cx="20" cy="22" r="14" fill="none" stroke="currentColor" stroke-width="2"/><line x1="20" y1="8" x2="20" y2="2" stroke="currentColor" stroke-width="2.5"/><line x1="16" y1="5" x2="24" y2="5" stroke="currentColor" stroke-width="2.5"/><path d="M6 22 L34 22" stroke="currentColor" stroke-width="1.5"/></svg>`,
+
+    // MG - Octagonal badge with MG
+    'MG': `<svg class="brand-logo" viewBox="0 0 40 40"><polygon points="13,4 27,4 36,13 36,27 27,36 13,36 4,27 4,13" fill="none" stroke="currentColor" stroke-width="2.2"/><text x="20" y="26" text-anchor="middle" font-size="13" font-weight="800" font-family="serif" fill="currentColor">MG</text></svg>`,
+
+    // Mitsubishi - Three diamonds
+    'Mitsubishi': `<svg class="brand-logo" viewBox="0 0 40 40"><path d="M20 4 L12 18 L20 18 Z" fill="currentColor"/><path d="M20 4 L28 18 L20 18 Z" fill="currentColor"/><path d="M20 18 L12 32 L20 32 Z" fill="currentColor"/><path d="M20 18 L28 32 L20 32 Z" fill="currentColor"/><path d="M4 18 L12 32 L12 18 Z" fill="currentColor"/><path d="M36 18 L28 32 L28 18 Z" fill="currentColor"/></svg>`,
+};
+
+// Brand gradient colors for card stripe
+const BRAND_GRADIENTS = {
+    'Volkswagen': 'linear-gradient(90deg, #00437a, #1a73e8)',
+    'BMW': 'linear-gradient(90deg, #0066b1, #00c6ff)',
+    'Honda': 'linear-gradient(90deg, #cc0000, #ff4444)',
+    'Renault': 'linear-gradient(90deg, #ffcc00, #ffe066)',
+    'Peugeot': 'linear-gradient(90deg, #1b3d6d, #4a90d9)',
+    'Skoda': 'linear-gradient(90deg, #4ba82e, #7bc74a)',
+    'Toyota': 'linear-gradient(90deg, #eb0a1e, #ff6b6b)',
+    'Fiat': 'linear-gradient(90deg, #96002e, #d4004a)',
+    'Ford': 'linear-gradient(90deg, #003399, #4a8cff)',
+    'Opel': 'linear-gradient(90deg, #f7e600, #ffd700)',
+    'Hyundai': 'linear-gradient(90deg, #002c5f, #4a90d9)',
+    'Dacia': 'linear-gradient(90deg, #646b52, #8fae78)',
+    'Seat': 'linear-gradient(90deg, #e3000f, #ff4444)',
+    'Nissan': 'linear-gradient(90deg, #c3002f, #ff4466)',
+    'Kia': 'linear-gradient(90deg, #05141f, #bb162b)',
+    'Audi': 'linear-gradient(90deg, #bb0a30, #ff1744)',
+    'Mercedes-Benz': 'linear-gradient(90deg, #00adef, #66d4ff)',
+    'Citroën': 'linear-gradient(90deg, #ac1826, #d4364c)',
+    'Cupra': 'linear-gradient(90deg, #003340, #007a8a)',
+    'Volvo': 'linear-gradient(90deg, #003057, #1a73b5)',
+    'MG': 'linear-gradient(90deg, #d4002a, #ff3355)',
+    'Mitsubishi': 'linear-gradient(90deg, #cc0000, #ff4444)',
 };
 
 function getBrandLogo(brand) {
@@ -204,6 +281,11 @@ function renderCars(cars) {
         card.style.animationDelay = `${Math.min(index, 10) * 0.05}s`;
         card.style.position = 'relative';
 
+        // Brand gradient stripe
+        if (BRAND_GRADIENTS[car.brand]) {
+            card.style.setProperty('--brand-gradient', BRAND_GRADIENTS[car.brand]);
+        }
+
         // Kritik sorun sayısını hesapla
         const criticalCount = car.problems.filter(p => p.severity === 'high').length;
         const criticalBadge = criticalCount > 0
@@ -239,6 +321,23 @@ function renderCars(cars) {
                 ${criticalBadge}
             </div>
         `;
+
+        // 3D Tilt / Parallax Effect
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -6;
+            const rotateY = ((x - centerX) / centerX) * 6;
+            card.classList.add('tilt-active');
+            card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('tilt-active');
+            card.style.transform = '';
+        });
 
         // Compare checkbox click
         const checkbox = card.querySelector('.compare-checkbox');
@@ -1009,10 +1108,65 @@ function updateYearFilter() {
 }
 
 // ==============================
+// SKELETON LOADING
+// ==============================
+function showSkeletonLoading() {
+    carsGrid.innerHTML = '';
+    for (let i = 0; i < 6; i++) {
+        const skeleton = document.createElement('div');
+        skeleton.className = 'skeleton-card';
+        skeleton.style.animationDelay = `${i * 0.05}s`;
+        skeleton.innerHTML = `
+            <div class="skeleton-image"></div>
+            <div class="skeleton-text narrow" style="margin-top:1rem;"></div>
+            <div class="skeleton-text title wide"></div>
+            <div class="skeleton-text medium"></div>
+            <div class="skeleton-text wide"></div>
+            <div class="skeleton-badge"></div>
+        `;
+        carsGrid.appendChild(skeleton);
+    }
+}
+
+// ==============================
+// POPULAR CARS SECTION
+// ==============================
+function renderPopularCars() {
+    const popularSection = document.getElementById('popularSection');
+    if (!popularSection) return;
+
+    // En çok sorunlu araçlardan seçim (en çok problemi olan 8 araç)
+    const sorted = [...carsData].sort((a, b) => b.problems.length - a.problems.length);
+    const topCars = sorted.slice(0, 8);
+
+    const scrollContainer = popularSection.querySelector('.popular-scroll');
+    if (!scrollContainer) return;
+
+    scrollContainer.innerHTML = '';
+    topCars.forEach(car => {
+        const item = document.createElement('div');
+        item.className = 'popular-item';
+        item.innerHTML = `
+            <div class="popular-item-image" style="background-image: url('${car.imageUrl}');"></div>
+            <div class="popular-item-info">
+                <div class="popular-brand">${getBrandLogo(car.brand)} ${car.brand}</div>
+                <div class="popular-model">${car.model}</div>
+                <div class="popular-problems">${car.problems.length} Sorun</div>
+            </div>
+        `;
+        item.addEventListener('click', () => openModal(car));
+        scrollContainer.appendChild(item);
+    });
+}
+
+// ==============================
 // INIT
 // ==============================
 // Araçları rastgele (karışık) sırala
 carsData.sort(() => Math.random() - 0.5);
+
+// Skeleton göster
+showSkeletonLoading();
 
 initFilters();
 updateYearFilter();
@@ -1020,6 +1174,11 @@ updateYearFilter();
 yearFilter.removeEventListener('change', applyFilters);
 yearFilter.addEventListener('change', applyFilters);
 renderStats();
-renderCars(carsData);
-loadFiltersFromURL();
-resultCount.innerHTML = `Toplam <span class="highlight-number">${carsData.length}</span> araç listeleniyor`;
+
+// Skeleton'dan gerçek içeriğe geçiş
+setTimeout(() => {
+    renderCars(carsData);
+    renderPopularCars();
+    loadFiltersFromURL();
+    resultCount.innerHTML = `Toplam <span class="highlight-number">${carsData.length}</span> araç listeleniyor`;
+}, 600);

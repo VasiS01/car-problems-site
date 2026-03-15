@@ -3,32 +3,90 @@
 /* ============================== */
 :root,
 [data-theme="dark"] {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
+    --bg-color: #0a0f1e;
+    --card-bg: rgba(22, 33, 62, 0.7);
+    --card-bg-solid: #16213e;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
     --accent: #ef4444;
     --accent-hover: #dc2626;
-    --border-color: #334155;
+    --border-color: rgba(51, 65, 85, 0.6);
     --header-gradient-start: #020617;
     --footer-bg: #020617;
     --search-highlight: rgba(250, 204, 21, 0.3);
+    --glass-blur: 16px;
+    --glass-bg: rgba(15, 23, 42, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glow-color: rgba(239, 68, 68, 0.4);
+    --skeleton-base: #1e293b;
+    --skeleton-shine: #334155;
+    --gradient-mesh-1: radial-gradient(ellipse at 20% 50%, rgba(120, 40, 200, 0.08) 0%, transparent 50%);
+    --gradient-mesh-2: radial-gradient(ellipse at 80% 20%, rgba(239, 68, 68, 0.06) 0%, transparent 50%);
+    --gradient-mesh-3: radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
 }
 
 /* ============================== */
 /* LIGHT THEME                    */
 /* ============================== */
 [data-theme="light"] {
-    --bg-color: #f1f5f9;
-    --card-bg: #ffffff;
+    --bg-color: #f0f4f8;
+    --card-bg: rgba(255, 255, 255, 0.75);
+    --card-bg-solid: #ffffff;
     --text-main: #0f172a;
     --text-muted: #64748b;
     --accent: #dc2626;
     --accent-hover: #b91c1c;
-    --border-color: #cbd5e1;
+    --border-color: rgba(203, 213, 225, 0.7);
     --header-gradient-start: #e2e8f0;
     --footer-bg: #e2e8f0;
     --search-highlight: rgba(250, 204, 21, 0.45);
+    --glass-blur: 12px;
+    --glass-bg: rgba(255, 255, 255, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glow-color: rgba(220, 38, 38, 0.25);
+    --skeleton-base: #e2e8f0;
+    --skeleton-shine: #f1f5f9;
+    --gradient-mesh-1: radial-gradient(ellipse at 20% 50%, rgba(120, 40, 200, 0.04) 0%, transparent 50%);
+    --gradient-mesh-2: radial-gradient(ellipse at 80% 20%, rgba(239, 68, 68, 0.04) 0%, transparent 50%);
+    --gradient-mesh-3: radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+    --image-overlay-height: 40%;
+    --image-overlay-opacity: 0.35;
+    --image-overlay-hover-opacity: 0.2;
+
+    /* Modal overrides for light theme */
+    --modal-overlay: rgba(0, 0, 0, 0.45);
+    --modal-bg: rgba(255, 255, 255, 0.97);
+    --modal-shadow: 0 25px 60px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.05);
+    --problem-item-bg: rgba(241, 245, 249, 0.8);
+    --modal-filter-bg: rgba(241, 245, 249, 0.6);
+    --category-border-color: rgba(15, 23, 42, 0.1);
+}
+
+/* ============================== */
+/* BRAND COLORS                   */
+/* ============================== */
+:root {
+    --brand-volkswagen: #00437a;
+    --brand-bmw: #0066b1;
+    --brand-honda: #cc0000;
+    --brand-renault: #ffcc00;
+    --brand-peugeot: #1b3d6d;
+    --brand-skoda: #4ba82e;
+    --brand-toyota: #eb0a1e;
+    --brand-fiat: #96002e;
+    --brand-ford: #003399;
+    --brand-opel: #f7e600;
+    --brand-hyundai: #002c5f;
+    --brand-dacia: #646b52;
+    --brand-seat: #e3000f;
+    --brand-nissan: #c3002f;
+    --brand-kia: #05141f;
+    --brand-audi: #bb0a30;
+    --brand-citroen: #ac1826;
+    --brand-mg: #d4002a;
+    --brand-cupra: #003340;
+    --brand-volvo: #003057;
+    --brand-mercedes: #00adef;
 }
 
 * {
@@ -40,16 +98,23 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
+    background-image: var(--gradient-mesh-1), var(--gradient-mesh-2), var(--gradient-mesh-3);
+    background-attachment: fixed;
     color: var(--text-main);
     line-height: 1.6;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header {
     text-align: center;
     padding: 2.5rem 2rem 2rem;
-    background: linear-gradient(to bottom, var(--header-gradient-start), var(--bg-color));
-    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(180deg, var(--header-gradient-start) 0%, transparent 100%);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-bottom: 1px solid var(--glass-border);
+    position: relative;
+    z-index: 10;
+    transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.6s ease;
 }
 
 .header-top-row {
@@ -136,13 +201,15 @@ select {
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     border-radius: 50px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--glass-border);
     background-color: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--text-main);
     outline: none;
     appearance: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 select:focus {
@@ -171,11 +238,13 @@ select option {
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
     border-radius: 50px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--glass-border);
     background-color: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--text-main);
     outline: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #searchInput:focus {
@@ -213,18 +282,40 @@ main {
 }
 
 .car-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     animation: fadeIn 0.5s ease-out both;
-    /* changed forwards to both */
     will-change: transform, opacity;
-    /* force hardware acceleration */
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+/* Brand gradient stripe at top of card */
+.car-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--brand-gradient, linear-gradient(90deg, var(--accent), var(--accent)));
+    z-index: 5;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.car-card:hover::before {
+    opacity: 1;
+    height: 4px;
 }
 
 .car-card:focus {
@@ -237,7 +328,33 @@ main {
     height: 180px;
     background-size: cover;
     background-position: center;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Gradient overlay on image */
+.car-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--image-overlay-height, 60%);
+    background: linear-gradient(to top, var(--card-bg-solid) 0%, transparent 100%);
+    opacity: var(--image-overlay-opacity, 0.7);
+    pointer-events: none;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+/* Zoom on hover */
+.car-card:hover .car-image {
+    transform: scale(1.08);
+}
+
+.car-card:hover .car-image::after {
+    opacity: var(--image-overlay-hover-opacity, 0.5);
 }
 
 .car-info {
@@ -250,9 +367,9 @@ main {
 }
 
 .car-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--glow-color);
+    border-color: rgba(239, 68, 68, 0.4);
 }
 
 .car-brand {
@@ -295,14 +412,16 @@ mark {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--modal-overlay, rgba(0, 0, 0, 0.8));
     backdrop-filter: blur(5px);
     align-items: center;
     justify-content: center;
 }
 
 .modal-content {
-    background-color: var(--card-bg);
+    background: var(--modal-bg, var(--card-bg));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 2.5rem;
     border-radius: 20px;
     max-width: 700px;
@@ -310,9 +429,9 @@ mark {
     max-height: 80vh;
     overflow-y: auto;
     position: relative;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    animation: slideIn 0.3s ease-out;
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--modal-shadow, 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(239, 68, 68, 0.1));
+    animation: slideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Webkit scrollbar for modal */
@@ -385,7 +504,7 @@ mark {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--modal-filter-bg, rgba(255, 255, 255, 0.02));
     padding: 1rem;
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -417,7 +536,7 @@ mark {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--category-border-color, rgba(255, 255, 255, 0.1));
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -443,7 +562,7 @@ mark {
 }
 
 .problem-item {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: var(--problem-item-bg, rgba(255, 255, 255, 0.03));
     border-left: 4px solid var(--border-color);
     padding: 1.5rem;
     border-radius: 8px;
@@ -587,12 +706,14 @@ mark {
 
 /* Footer */
 footer {
-    background-color: var(--footer-bg);
-    border-top: 1px solid var(--border-color);
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-top: 1px solid var(--glass-border);
     padding: 3rem 2rem;
     text-align: center;
     margin-top: 4rem;
-    transition: background-color 0.4s ease;
+    transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-content {
@@ -740,21 +861,36 @@ html {
 }
 
 .stat-card {
-    background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.02));
-    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 1.2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.3rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.06), transparent 60%);
+    pointer-events: none;
 }
 
 .stat-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-color);
+    border-color: rgba(239, 68, 68, 0.3);
 }
 
 .stat-icon {
@@ -1055,10 +1191,233 @@ html {
     background: rgba(16, 185, 129, 0.15);
     color: #10b981;
 }
+/* ============================== */
+/* SKELETON LOADING               */
+/* ============================== */
+.skeleton-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.skeleton-image {
+    width: 100%;
+    height: 180px;
+    background: var(--skeleton-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, var(--skeleton-shine) 50%, transparent 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-text {
+    height: 14px;
+    border-radius: 6px;
+    background: var(--skeleton-base);
+    margin: 0.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, var(--skeleton-shine) 50%, transparent 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-text.wide { width: 70%; }
+.skeleton-text.medium { width: 50%; }
+.skeleton-text.narrow { width: 30%; }
+.skeleton-text.title {
+    height: 20px;
+    margin-top: 1rem;
+}
+
+.skeleton-badge {
+    display: inline-block;
+    width: 120px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--skeleton-base);
+    margin: 0.5rem 1.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, var(--skeleton-shine) 50%, transparent 100%);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(200%); }
+}
+
+/* ============================== */
+/* 3D TILT CARD EFFECT            */
+/* ============================== */
+.car-card.tilt-active {
+    transition: none;
+}
+
+/* ============================== */
+/* POPULAR CARS SECTION           */
+/* ============================== */
+.popular-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem 0;
+}
+
+.popular-section h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-main);
+}
+
+.popular-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+.popular-scroll::-webkit-scrollbar {
+    height: 6px;
+}
+
+.popular-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.popular-scroll::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+
+.popular-item {
+    min-width: 200px;
+    max-width: 200px;
+    background: var(--card-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    scroll-snap-align: start;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.popular-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-color);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.popular-item-image {
+    width: 100%;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.popular-item-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--image-overlay-height, 50%);
+    background: linear-gradient(to top, var(--card-bg-solid), transparent);
+    opacity: var(--image-overlay-opacity, 0.8);
+    transition: opacity 0.3s ease;
+}
+
+.popular-item-info {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.popular-item-info .popular-brand {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.popular-item-info .popular-model {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+.popular-item-info .popular-problems {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 0.3rem;
+}
+
+/* ============================== */
+/* SMOOTH THEME TRANSITION        */
+/* ============================== */
+body, header, footer,
+.modal-content, .stat-card,
+select, #searchInput, .compare-bar,
+.back-to-top, .theme-toggle, .header-action-btn,
+.popular-item, .popular-section h2 {
+    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.car-card {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+                box-shadow 0.4s ease,
+                border-color 0.3s ease,
+                background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* ==================== */
 /* RESPONSIVE TASARIM   */
-/* ==================== */
+/* ====================*/
 
 /* Tablet (768px ve altı) */
 @media (max-width: 768px) {
