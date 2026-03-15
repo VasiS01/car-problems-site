@@ -47,51 +47,61 @@
             </div>
         </div>
         <p>Alacağınız aracın veya mevcut arabanızın gizli kalmış hastalıklarını keşfedin.</p>
-        <div class="filters-container">
-            <div class="select-wrapper">
-                <select id="brandFilter" aria-label="Marka Filtresi">
-                    <option value="">Tüm Markalar</option>
-                </select>
-            </div>
-            <div class="select-wrapper">
-                <select id="modelFilter" disabled aria-label="Model Filtresi">
-                    <option value="">Model Seçin (Kasa Kodu)</option>
-                </select>
-            </div>
-        </div>
 
-        <div class="filters-container secondary-filters">
-            <div class="select-wrapper">
-                <select id="engineFilter" disabled aria-label="Motor Tipi Filtresi">
-                    <option value="">Motor</option>
-                </select>
-            </div>
-            <div class="select-wrapper">
-                <select id="transmissionFilter" disabled aria-label="Şanzıman Filtresi">
-                    <option value="">Şanzıman / Tümü</option>
-                </select>
-            </div>
-            <div class="select-wrapper">
-                <select id="yearFilter" aria-label="Yıl Filtresi">
-                    <option value="">Yıl</option>
-                </select>
-            </div>
-            <div class="select-wrapper">
-                <select id="sortFilter" aria-label="Sıralama">
-                    <option value="default">Sırala ↕</option>
-                    <option value="problems-desc">En Çok Sorunlu ↓</option>
-                    <option value="problems-asc">En Az Sorunlu ↑</option>
-                    <option value="critical-desc">En Çok Kritik ↓</option>
-                </select>
-            </div>
-        </div>
+        <button id="filterToggleBtn" class="filter-toggle-btn" aria-expanded="false" aria-controls="filterPanel">
+            <span class="filter-toggle-icon">🔍</span>
+            <span class="filter-toggle-text">Filtrele & Ara</span>
+            <span id="filterBadge" class="filter-badge" style="display:none;">0</span>
+            <span class="filter-toggle-arrow">▼</span>
+        </button>
 
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="veya kelime arayın (örn: DSG, göçük)..."
-                aria-label="Arama">
-        </div>
+        <div id="filterPanel" class="filter-panel collapsed">
+            <div class="filters-container">
+                <div class="select-wrapper">
+                    <select id="brandFilter" aria-label="Marka Filtresi">
+                        <option value="">Tüm Markalar</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <select id="modelFilter" disabled aria-label="Model Filtresi">
+                        <option value="">Model Seçin (Kasa Kodu)</option>
+                    </select>
+                </div>
+            </div>
 
-        <div id="resultCount" class="result-count" aria-live="polite"></div>
+            <div class="filters-container secondary-filters">
+                <div class="select-wrapper">
+                    <select id="engineFilter" disabled aria-label="Motor Tipi Filtresi">
+                        <option value="">Motor</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <select id="transmissionFilter" disabled aria-label="Şanzıman Filtresi">
+                        <option value="">Şanzıman / Tümü</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <select id="yearFilter" aria-label="Yıl Filtresi">
+                        <option value="">Yıl</option>
+                    </select>
+                </div>
+                <div class="select-wrapper">
+                    <select id="sortFilter" aria-label="Sıralama">
+                        <option value="default">Sırala ↕</option>
+                        <option value="problems-desc">En Çok Sorunlu ↓</option>
+                        <option value="problems-asc">En Az Sorunlu ↑</option>
+                        <option value="critical-desc">En Çok Kritik ↓</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="veya kelime arayın (örn: DSG, göçük)..."
+                    aria-label="Arama">
+            </div>
+
+            <div id="resultCount" class="result-count" aria-live="polite"></div>
+        </div>
     </header>
 
     <!-- İstatistik Kartları -->

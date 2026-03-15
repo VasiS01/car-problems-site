@@ -217,6 +217,9 @@ function resetAllFilters() {
     updateCompareBar();
     applyFilters();
     window.location.hash = '';
+    // Collapse filter panel
+    collapseFilterPanel();
+    updateFilterBadge();
 }
 
 logoBtn.addEventListener('click', resetAllFilters);
@@ -788,6 +791,7 @@ function applyFilters() {
     }
 
     updateURL();
+    updateFilterBadge();
 }
 
 // ==============================
@@ -846,6 +850,12 @@ function loadFiltersFromURL() {
 
     // Hash URL - aç modal otomatik
     loadFromHash();
+
+    // Expand filter panel if any filter is active from URL
+    updateFilterBadge();
+    if (getActiveFilterCount() > 0) {
+        expandFilterPanel();
+    }
 }
 
 // ==============================
@@ -1106,6 +1116,57 @@ function updateYearFilter() {
         yearFilter.value = prevValue;
     }
 }
+
+// ==============================
+// FILTER TOGGLE PANEL
+// ==============================
+const filterToggleBtn = document.getElementById('filterToggleBtn');
+const filterPanel = document.getElementById('filterPanel');
+const filterBadge = document.getElementById('filterBadge');
+
+function getActiveFilterCount() {
+    let count = 0;
+    if (brandFilter.value) count++;
+    if (modelFilter.value) count++;
+    if (engineFilter.value) count++;
+    if (transmissionFilter.value) count++;
+    if (yearFilter.value) count++;
+    if (searchInput.value.trim()) count++;
+    if (sortFilter.value !== 'default') count++;
+    return count;
+}
+
+function updateFilterBadge() {
+    const count = getActiveFilterCount();
+    if (count > 0) {
+        filterBadge.textContent = count;
+        filterBadge.style.display = 'inline-flex';
+    } else {
+        filterBadge.style.display = 'none';
+    }
+}
+
+function expandFilterPanel() {
+    filterPanel.classList.remove('collapsed');
+    filterToggleBtn.classList.add('active');
+    filterToggleBtn.setAttribute('aria-expanded', 'true');
+}
+
+function collapseFilterPanel() {
+    filterPanel.classList.add('collapsed');
+    filterToggleBtn.classList.remove('active');
+    filterToggleBtn.setAttribute('aria-expanded', 'false');
+}
+
+function toggleFilterPanel() {
+    if (filterPanel.classList.contains('collapsed')) {
+        expandFilterPanel();
+    } else {
+        collapseFilterPanel();
+    }
+}
+
+filterToggleBtn.addEventListener('click', toggleFilterPanel);
 
 // ==============================
 // SKELETON LOADING
