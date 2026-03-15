@@ -1335,6 +1335,588 @@
             { "title": "1.5 eTSI Yağ Eksiltme", "desc": "1.5 eTSI motorlarda ilk üretimden itibaren kronik olan yüksek yağ tüketimi.", "severity": "medium", "relatedEngine": "1.5 eTSI", "relatedTransmission": "Tümü" },
             { "title": "1.5 eTSI Alternatör (Marş Dinamosu) Arızası", "desc": "48V hafif hibrit sistemindeki alternatörün bozulmasıyla aracın elektrik sistemlerini kapatıp yolda kalması, marş basmaması.", "severity": "high", "relatedEngine": "1.5 eTSI", "relatedTransmission": "Tümü" }
         ]
+    },
+    {
+        "brand": "Kia",
+        "model": "Ceed (CD)",
+        "years": "2018 - Günümüz",
+        "imageUrl": "images/kia_ceed.png",
+        "engines": ["1.0 T-GDI", "1.4 T-GDI", "1.5 T-GDI", "1.6 CRDi"],
+        "transmissions": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"],
+        "engineTransMap": {
+            "1.0 T-GDI": ["6 İleri Manuel"],
+            "1.4 T-GDI": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"],
+            "1.5 T-GDI": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"],
+            "1.6 CRDi": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"]
+        },
+        "problems": [
+            { "title": "DCT Şanzıman Sarsıntısı", "desc": "7 ileri çift kavrama (DCT) şanzımanda düşük hızlarda titreme ve sarsıntı, özellikle 1-2 vites geçişlerinde ve dur-kalk trafikte belirginleşir.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri DCT (Çift Kavrama)" },
+            { "title": "1.0 T-GDI Yağ Eksiltme", "desc": "3 silindirli 1.0 T-GDI motorlarda normalin üzerinde yağ tüketimi, özellikle şehir içi kullanımda belirginleşir.", "severity": "medium", "relatedEngine": "1.0 T-GDI", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "Dokunmatik ekranın zaman zaman donması, navigasyonun kilitlenmesi veya Apple CarPlay/Android Auto bağlantısının kopması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Dizel Enjektör Sesi", "desc": "1.6 CRDi dizel motorlarda soğuk çalıştırmada belirgin enjektör şakırtı sesi ve rölantide titreşim.", "severity": "low", "relatedEngine": "1.6 CRDi", "relatedTransmission": "Tümü" },
+            { "title": "Ön Süspansiyon Gıcırtısı", "desc": "Soğuk havalarda ön amortisör takozlarından ve salıncak burçlarından gelen gıcırtı sesleri.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Fren Disk Deformasyonu", "desc": "Orijinal fren disklerinin ısı değişimlerinden çarpılıp direksiyonda titreme vermesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Kia",
+        "model": "Sportage (NQ5)",
+        "years": "2021 - Günümüz",
+        "imageUrl": "images/kia_sportage_nq5.png",
+        "engines": ["1.6 T-GDI", "1.6 CRDi", "1.6 T-GDI Hybrid"],
+        "transmissions": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)", "6 İleri Otomatik (Hybrid)"],
+        "engineTransMap": {
+            "1.6 T-GDI": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"],
+            "1.6 CRDi": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"],
+            "1.6 T-GDI Hybrid": ["6 İleri Otomatik (Hybrid)"]
+        },
+        "problems": [
+            { "title": "DCT Şanzıman Titremesi", "desc": "7 ileri DCT çift kavrama şanzımanda düşük hızlarda sarsıntı ve titreme, özellikle dur-kalk trafikte.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri DCT (Çift Kavrama)" },
+            { "title": "Multimedya Sistemi Donma", "desc": "12.3 inç dokunmatik ekranın donması veya sürüş sırasında resetlenmesi, navigasyonun gecikmeli tepki vermesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Fren Disk Deformasyonu", "desc": "Ağır SUV olmasından dolayı ön fren disklerinin erken çarpılıp direksiyonda titreme hissi vermesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Ön Süspansiyon Gıcırtısı", "desc": "Soğuk ve nemli havalarda ön süspansiyondan gelen gıcırtı sesleri, salıncak burçlarından kaynaklanır.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Kapı İçi Su Birikimi", "desc": "Kapı tahliye deliklerinin tıkanmasıyla kapı panel içinde su birikmesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Kia",
+        "model": "Stonic",
+        "years": "2017 - Günümüz",
+        "imageUrl": "images/kia_stonic.png",
+        "engines": ["1.0 T-GDI", "1.4 MPI", "1.6 CRDi"],
+        "transmissions": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)", "IVT (Sürekli Değişken)"],
+        "engineTransMap": {
+            "1.0 T-GDI": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"],
+            "1.4 MPI": ["6 İleri Manuel", "IVT (Sürekli Değişken)"],
+            "1.6 CRDi": ["6 İleri Manuel"]
+        },
+        "problems": [
+            { "title": "DCT Şanzıman Sarsıntısı", "desc": "7 ileri DCT çift kavrama şanzımanda düşük hızlarda sarsıntı ve titreme.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri DCT (Çift Kavrama)" },
+            { "title": "IVT Uğultusu", "desc": "IVT şanzımanda hızlanmalarda motorun yüksek devirde kalıp uğultu yapması.", "severity": "medium", "relatedEngine": "1.4 MPI", "relatedTransmission": "IVT (Sürekli Değişken)" },
+            { "title": "Arka Süspansiyon Sertliği", "desc": "Burulma çubuğu arka süspansiyonun bozuk yollarda sert çalışıp yolcuları rahatsız etmesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "İç Trim Plastik Sesleri", "desc": "Kapı panelleri ve torpido çevresindeki sert plastiklerin bozuk yollarda tıkırtı yapması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Far Buğulanması", "desc": "LED farların soğuk ve nemli havalarda içeriden buğulanıp aydınlatma performansını düşürmesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Audi",
+        "model": "A3 (8V)",
+        "years": "2012 - 2020",
+        "imageUrl": "images/audi_a3_8v.png",
+        "engines": ["1.0 TFSI", "1.2 TFSI", "1.4 TFSI", "1.5 TFSI", "1.6 TDI", "2.0 TDI"],
+        "transmissions": ["Manuel", "7 İleri S Tronic (Kuru DSG)", "6 İleri S Tronic (Islak DSG)"],
+        "engineTransMap": {
+            "1.0 TFSI": ["Manuel", "7 İleri S Tronic (Kuru DSG)"],
+            "1.2 TFSI": ["Manuel", "7 İleri S Tronic (Kuru DSG)"],
+            "1.4 TFSI": ["Manuel", "7 İleri S Tronic (Kuru DSG)"],
+            "1.5 TFSI": ["Manuel", "7 İleri S Tronic (Kuru DSG)"],
+            "1.6 TDI": ["Manuel", "7 İleri S Tronic (Kuru DSG)"],
+            "2.0 TDI": ["Manuel", "6 İleri S Tronic (Islak DSG)"]
+        },
+        "problems": [
+            { "title": "S Tronic (DSG) Kavrama & Mekatronik Arızası", "desc": "VW grubu ortak sorunu olan DQ200 kuru kavramalı S Tronic'te düşük hızlarda titreme, mekatronik kart yanması ve basınç tüpü arızası.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri S Tronic (Kuru DSG)" },
+            { "title": "Su Pompası Kaçağı", "desc": "TFSI motorlarda plastik su pompası gövdesinin zamanla çatlayıp antifriz kaçırması, gizli hararet riski.", "severity": "medium", "relatedEngine": "1.2 TFSI / 1.4 TFSI", "relatedTransmission": "Tümü" },
+            { "title": "Turbo Wastegate Zırıltısı", "desc": "1.2 ve 1.4 TFSI motorlarda turbo wastegate valfinden gelen metalik rezonans sesi, 2000-3000 devir arası.", "severity": "low", "relatedEngine": "1.2 TFSI / 1.4 TFSI", "relatedTransmission": "Tümü" },
+            { "title": "Direksiyon Kutusu Tıkırtısı", "desc": "Bozuk yollarda ve park manevralarında direksiyon kutusundan gelen boşluk tıkırtıları.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "MMI Multimedya Donması", "desc": "MMI ekranının donması veya gecikmeli tepki vermesi, özellikle navigasyon ve telefon bağlantısında.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "1.5 TFSI Yağ Eksiltme", "desc": "Yeni nesil 1.5 TFSI Evo motorlarda segman yapısından kaynaklı kronik yağ tüketimi.", "severity": "medium", "relatedEngine": "1.5 TFSI", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Audi",
+        "model": "A4 (B9)",
+        "years": "2015 - 2023",
+        "imageUrl": "images/audi_a4_b9.png",
+        "engines": ["1.4 TFSI", "2.0 TFSI", "2.0 TDI"],
+        "transmissions": ["Manuel", "7 İleri S Tronic (Kuru DSG)", "7 İleri S Tronic (Islak DSG)"],
+        "engineTransMap": {
+            "1.4 TFSI": ["Manuel", "7 İleri S Tronic (Kuru DSG)"],
+            "2.0 TFSI": ["7 İleri S Tronic (Islak DSG)"],
+            "2.0 TDI": ["Manuel", "7 İleri S Tronic (Islak DSG)"]
+        },
+        "problems": [
+            { "title": "S Tronic Mekatronik Arızası (1.4 TFSI)", "desc": "1.4 TFSI modellerde kuru kavramalı S Tronic'te düşük hızda titreme ve mekatronik kart yanması.", "severity": "high", "relatedEngine": "1.4 TFSI", "relatedTransmission": "7 İleri S Tronic (Kuru DSG)" },
+            { "title": "Su Pompası / Termostat Arızası", "desc": "TFSI motorlarda su pompasının veya termostatın erken deforme olup soğutma sıvısı kaçırması.", "severity": "medium", "relatedEngine": "1.4 TFSI / 2.0 TFSI", "relatedTransmission": "Tümü" },
+            { "title": "Virtual Cockpit Donması", "desc": "Dijital gösterge panelinin (Virtual Cockpit) gecikmeli tepki vermesi veya kısa süreli donması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "AdBlue Sistemi Arızası", "desc": "Dizel modellerde AdBlue enjektörünün kristalleşip tıkanması, motor arıza lambası ve güç kısıtlaması.", "severity": "high", "relatedEngine": "2.0 TDI", "relatedTransmission": "Tümü" },
+            { "title": "LED Far Modül Arızası", "desc": "Matrix LED farların kontrol modülünün arızalanması, farların kısmen sönmesi veya hatalı çalışması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Direksiyon Kutusu Sesi", "desc": "Bozuk yollarda direksiyon kutusundan gelen mekanik tıkırtı sesleri.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Ford",
+        "model": "Fiesta (Mk7/7.5)",
+        "years": "2008 - 2019",
+        "imageUrl": "images/ford_fiesta_mk7.png",
+        "engines": ["1.4 (Atmosferik)", "1.0 EcoBoost", "1.5 TDCi", "1.6 TDCi"],
+        "transmissions": ["Manuel", "PowerShift (Çift Kavrama)", "6 İleri Otomatik"],
+        "engineTransMap": {
+            "1.4 (Atmosferik)": ["Manuel", "6 İleri Otomatik"],
+            "1.0 EcoBoost": ["Manuel", "PowerShift (Çift Kavrama)"],
+            "1.5 TDCi": ["Manuel"],
+            "1.6 TDCi": ["Manuel"]
+        },
+        "problems": [
+            { "title": "PowerShift Şanzıman Arızası", "desc": "Kuru kavramalı PowerShift çift kavrama şanzımanda kalkışlarda titreme, sarsıntı ve kavrama aşınması. Ford'un en büyük kronik sorunlarından biridir.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "PowerShift (Çift Kavrama)" },
+            { "title": "1.0 EcoBoost Soğutma Hortumu", "desc": "1.0 EcoBoost motorlarda soğutma hortumlarının çatlayıp delinmesi, motorun hararet yapıp kapak conta yakması.", "severity": "high", "relatedEngine": "1.0 EcoBoost", "relatedTransmission": "Tümü" },
+            { "title": "Kapı Fitilleri Sarkması", "desc": "Kapı alt fitillerinin zamanla yapışkanını yitirip sarkması ve su sızdırması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Ön Takım Erken Aşınması", "desc": "Z rotları ve salıncak burçlarının Türkiye yollarında çabuk deforme olup ses yapması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Katalitik Konvertör Arızası", "desc": "Benzinli ve LPG'li modellerde konvertör ömrünün kısa olması, motor arıza lambası yanması.", "severity": "medium", "relatedEngine": "1.4 (Atmosferik)", "relatedTransmission": "Tümü" },
+            { "title": "Direksiyon Kutusu Sesi", "desc": "Park manevralarında veya tırtıklı yollarda direksiyon milinden gelen hafif tıkırtı.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Ford",
+        "model": "Transit Connect",
+        "years": "2013 - Günümüz",
+        "imageUrl": "images/ford_transit_connect.png",
+        "engines": ["1.0 EcoBoost", "1.5 EcoBoost", "1.5 TDCi", "1.6 TDCi"],
+        "transmissions": ["Manuel", "6 İleri Otomatik", "8 İleri Otomatik"],
+        "engineTransMap": {
+            "1.0 EcoBoost": ["Manuel"],
+            "1.5 EcoBoost": ["Manuel", "8 İleri Otomatik"],
+            "1.5 TDCi": ["Manuel", "6 İleri Otomatik"],
+            "1.6 TDCi": ["Manuel"]
+        },
+        "problems": [
+            { "title": "1.6 TDCi Enjektör Arızası", "desc": "1.6 TDCi dizel motorlarda enjektörlerin zamanla arızalanması, motor silkme ve güç kaybı.", "severity": "high", "relatedEngine": "1.6 TDCi", "relatedTransmission": "Tümü" },
+            { "title": "1.0 EcoBoost Soğutma Sistemi", "desc": "1.0 EcoBoost motorlarda soğutma hortumlarının çatlayıp delinmesi ve motorun hararet yapması.", "severity": "high", "relatedEngine": "1.0 EcoBoost", "relatedTransmission": "Tümü" },
+            { "title": "Sürgülü Kapı Mekanizması", "desc": "Arka sürgülü kapının raylarının veya kilit mekanizmasının zamanla bozulması, kapının tam kapanmaması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "DPF Tıkanması (Dizel)", "desc": "Şehir içi kısa mesafe kullanımda dizel partikül filtresinin rejenerasyon yapamayıp tıkanması.", "severity": "medium", "relatedEngine": "1.5 TDCi / 1.6 TDCi", "relatedTransmission": "Tümü" },
+            { "title": "Turbo Arızası (1.5 TDCi)", "desc": "1.5 TDCi motorlarda turbo yağlama yetersizliğinden mil aşınması, güç kaybı ve duman.", "severity": "high", "relatedEngine": "1.5 TDCi", "relatedTransmission": "Tümü" },
+            { "title": "İç Mekan Plastik Kalitesi", "desc": "Ticari araç kökenli olması sebebiyle iç mekan plastiklerinin çabuk çizilmesi ve tıkırtı yapması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Renault",
+        "model": "Symbol / Thalia",
+        "years": "2008 - 2015",
+        "imageUrl": "images/renault_symbol.png",
+        "engines": ["1.2 16V", "1.5 dCi"],
+        "transmissions": ["Manuel"],
+        "engineTransMap": {
+            "1.2 16V": ["Manuel"],
+            "1.5 dCi": ["Manuel"]
+        },
+        "problems": [
+            { "title": "1.5 dCi EGR Valfi Tıkanması", "desc": "Şehir içi kullanımda EGR valfinin kurum bağlayıp tıkanması, motor arıza lambası ve güç kaybı.", "severity": "medium", "relatedEngine": "1.5 dCi", "relatedTransmission": "Tümü" },
+            { "title": "Debriyaj Merkezi Arızası", "desc": "Hidrolik debriyaj merkezinin iç kaçak yapması, debriyaj pedalının boşa düşmesi.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "Manuel" },
+            { "title": "Cam Krikosu Arızası", "desc": "Ön cam krikolarının kablo kopartması veya motor dişlisinin aşınması, camın yarıda kalması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Alt Takım Erken Aşınması", "desc": "Z rotları, salıncak burçları ve rotbaşlarının Türkiye yollarında hızla deforme olması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "İç Mekan Plastik Kalitesi", "desc": "Bütçe segmenti plastik kalitesi sebebiyle torpido ve kapı panellerinden gelen tıkırtılar.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Elektrik Tesisatı Sorunları", "desc": "Cam silecek motoru, far rölesi ve gösterge paneli aydınlatması gibi elektrik arızaları.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Renault",
+        "model": "Captur",
+        "years": "2013 - Günümüz",
+        "imageUrl": "images/renault_captur.png",
+        "engines": ["0.9 TCe", "1.2 TCe", "1.3 TCe", "1.5 dCi", "E-Tech Hybrid"],
+        "transmissions": ["Manuel", "EDC (Çift Kavrama)", "X-Tronic (CVT)"],
+        "engineTransMap": {
+            "0.9 TCe": ["Manuel"],
+            "1.2 TCe": ["Manuel", "EDC (Çift Kavrama)"],
+            "1.3 TCe": ["Manuel", "EDC (Çift Kavrama)"],
+            "1.5 dCi": ["Manuel", "EDC (Çift Kavrama)"],
+            "E-Tech Hybrid": ["X-Tronic (CVT)"]
+        },
+        "problems": [
+            { "title": "EDC Şanzıman Arızası", "desc": "EDC çift kavrama otomatik şanzımanda dur-kalk trafikte ısınma, titreme ve ilerleyen dönemde beyin arızası.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "EDC (Çift Kavrama)" },
+            { "title": "1.2 TCe Yağ Yakma", "desc": "Eski nesil 1.2 TCe motorlarda segman sorunu kaynaklı aşırı yağ tüketimi.", "severity": "high", "relatedEngine": "1.2 TCe", "relatedTransmission": "Tümü" },
+            { "title": "1.3 TCe Turbo Hortum Çatlağı", "desc": "Turbo basınç hortumunun zamanla çatlayıp patlaması, aniden güç kaybı.", "severity": "high", "relatedEngine": "1.3 TCe", "relatedTransmission": "Tümü" },
+            { "title": "0.9 TCe Turbo Arızası", "desc": "Küçük hacimli 0.9 TCe turbonun 80-100 bin km civarında arızalanması, güç kaybı ve duman.", "severity": "high", "relatedEngine": "0.9 TCe", "relatedTransmission": "Tümü" },
+            { "title": "Ön Takım Erken Aşınması", "desc": "Ön amortisör, Z rotları ve salıncak burçlarının bozuk yollarda çabuk deforme olması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "Easy Link / R-Link ekranının donması veya Bluetooth bağlantısının kopması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Volkswagen",
+        "model": "Caddy (SA/SB)",
+        "years": "2015 - Günümüz",
+        "imageUrl": "images/vw_caddy.png",
+        "engines": ["1.0 TSI", "1.4 TSI", "1.5 TSI", "2.0 TDI"],
+        "transmissions": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip", "7 İleri DSG (Islak)"],
+        "engineTransMap": {
+            "1.0 TSI": ["Manuel"],
+            "1.4 TSI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "1.5 TSI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "2.0 TDI": ["Manuel", "7 İleri DSG (Islak)"]
+        },
+        "problems": [
+            { "title": "DSG Kavrama & Mekatronik Arızası", "desc": "Kuru kavramalı DQ200 DSG'de düşük hızlarda titreme, özellikle ağır yükle trafikte kavrama ömrünün çok kısa olması.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri DSG (DQ200) Kuru Tip" },
+            { "title": "Sürgülü Kapı Rayı Aşınması", "desc": "Arka sürgülü kapı raylarının ve rulmanlarının zamanla aşınıp kapının açılıp kapanmasının zorlaşması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "2.0 TDI EGR / DPF Sorunları", "desc": "Şehir içi kullanımda EGR valfinin kurum bağlaması ve DPF tıkanması, motor arıza lambası.", "severity": "medium", "relatedEngine": "2.0 TDI", "relatedTransmission": "Tümü" },
+            { "title": "Su Pompası / Termostat Arızası", "desc": "TSI motorlarda su pompasının veya termostatın erken deforme olup soğutma sıvısı kaçırması.", "severity": "medium", "relatedEngine": "1.4 TSI / 1.5 TSI", "relatedTransmission": "Tümü" },
+            { "title": "İç Mekan Trim Sesleri", "desc": "Ticari kullanım sebebiyle zamanla artan torpido ve kapı paneli tıkırtıları.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Arka Amortisör Erken Bitişi", "desc": "Yük taşıma kapasitesinden dolayı arka amortisörlerin erken yağ sızdırıp sertleşmesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Peugeot",
+        "model": "208 (2. Nesil)",
+        "years": "2019 - Günümüz",
+        "imageUrl": "images/peugeot_208_2.png",
+        "engines": ["1.2 PureTech (Atmosferik)", "1.2 PureTech Turbo", "1.5 BlueHDi"],
+        "transmissions": ["Manuel", "EAT8 Tam Otomatik"],
+        "engineTransMap": {
+            "1.2 PureTech (Atmosferik)": ["Manuel"],
+            "1.2 PureTech Turbo": ["Manuel", "EAT8 Tam Otomatik"],
+            "1.5 BlueHDi": ["Manuel", "EAT8 Tam Otomatik"]
+        },
+        "problems": [
+            { "title": "1.2 PureTech Triger Kayışı", "desc": "Yağ içinde çalışan triger kayışının erken dökülmesi, yağ pompasını tıkayarak motor arızasına yol açması. PSA kronik sorunu.", "severity": "high", "relatedEngine": "1.2 PureTech Turbo", "relatedTransmission": "Tümü" },
+            { "title": "Fren Vakum Pompası Tıkanması", "desc": "Trigerden kopan parçacıkların fren vakum pompasını tıkayarak fren pedalının sertleşmesine yol açması.", "severity": "high", "relatedEngine": "1.2 PureTech Turbo", "relatedTransmission": "Tümü" },
+            { "title": "EAT8 Şanzıman Sert Geçiş", "desc": "EAT8 otomatik şanzımanda soğuk havalarda sert vites geçişleri.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "EAT8 Tam Otomatik" },
+            { "title": "3D i-Cockpit Gösterge Yansıması", "desc": "Dijital gösterge panelinin belirli güneş açılarında cam yansımasından okunamaması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Resetlenmesi", "desc": "Dokunmatik ekranın sürüş sırasında kararıp yeniden başlaması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Ön Süspansiyon Sesi", "desc": "Ön amortisör takozlarından ve alt kol burçlarından gelen gıcırtı ve tıkırtı sesleri.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Citroën",
+        "model": "C4 / C4 Cactus",
+        "years": "2014 - 2023",
+        "imageUrl": "images/citroen_c4.png",
+        "engines": ["1.2 PureTech", "1.2 PureTech Turbo", "1.5 BlueHDi", "1.6 BlueHDi"],
+        "transmissions": ["Manuel", "EAT6 Tam Otomatik", "EAT8 Tam Otomatik"],
+        "engineTransMap": {
+            "1.2 PureTech": ["Manuel"],
+            "1.2 PureTech Turbo": ["Manuel", "EAT6 Tam Otomatik", "EAT8 Tam Otomatik"],
+            "1.5 BlueHDi": ["Manuel", "EAT8 Tam Otomatik"],
+            "1.6 BlueHDi": ["Manuel", "EAT6 Tam Otomatik"]
+        },
+        "problems": [
+            { "title": "1.2 PureTech Triger Kayışı", "desc": "PSA kronik sorunu olan yağ içinde çalışan triger kayışının erken dökülmesi, motor arızası riski.", "severity": "high", "relatedEngine": "1.2 PureTech Turbo", "relatedTransmission": "Tümü" },
+            { "title": "Fren Vakum Pompası", "desc": "Trigerden kopan kauçuk parçacıklarının fren vakum pompasını tıkayarak frenin sertleşmesine yol açması.", "severity": "high", "relatedEngine": "1.2 PureTech Turbo", "relatedTransmission": "Tümü" },
+            { "title": "Cactus Airbump Sararması", "desc": "C4 Cactus'a özel yan Airbump plastiklerinin güneşte zamanla sararıp matlaşması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "DPF Tıkanması (Dizel)", "desc": "Şehir içi kısa mesafe kullanımda dizel partikül filtresinin tıkanması.", "severity": "medium", "relatedEngine": "1.5 BlueHDi / 1.6 BlueHDi", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "Dokunmatik ekranın donması veya CarPlay bağlantısının kopması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Süspansiyon Sertliği", "desc": "PHC (Progressive Hydraulic Cushions) süspansiyonlu modellerde bile bozuk yollarda sert hissedilmesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Dacia",
+        "model": "Jogger",
+        "years": "2022 - Günümüz",
+        "imageUrl": "images/dacia_jogger.png",
+        "engines": ["1.0 TCe", "1.0 TCe ECO-G (LPG)", "1.6 Hybrid"],
+        "transmissions": ["6 İleri Manuel", "Otomatik (Hybrid)"],
+        "engineTransMap": {
+            "1.0 TCe": ["6 İleri Manuel"],
+            "1.0 TCe ECO-G (LPG)": ["6 İleri Manuel"],
+            "1.6 Hybrid": ["Otomatik (Hybrid)"]
+        },
+        "problems": [
+            { "title": "ECO-G LPG Geçiş Sorunu", "desc": "Fabrika çıkışı LPG'li modellerde benzinden gaza geçişte sarsıntı ve gaz kesmeler.", "severity": "high", "relatedEngine": "1.0 TCe ECO-G (LPG)", "relatedTransmission": "Tümü" },
+            { "title": "Trim ve Plastik Tıkırtıları", "desc": "7 kişilik geniş gövde sebebiyle bozuk yollarda arka bölgeden gelen kronik tıkırtılar.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Süspansiyon Sertliği", "desc": "Maliyet odaklı süspansiyonun yüklü durumda bile bozuk yollarda sert çalışması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "İnce Boya Kalitesi", "desc": "Boya tabakasının ince olması sebebiyle taş izlerine karşı hassasiyet.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Rüzgar Sesi", "desc": "100 km/h üzeri hızlarda A sütunu ve ayna çevresinden belirgin rüzgar sesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Toyota",
+        "model": "Corolla (E180)",
+        "years": "2013 - 2019",
+        "imageUrl": "images/toyota_corolla_e180.png",
+        "engines": ["1.33 (Benzin)", "1.6 (Benzin)", "1.4 D-4D (Dizel)"],
+        "transmissions": ["6 İleri Manuel", "Multidrive S (CVT)"],
+        "engineTransMap": {
+            "1.33 (Benzin)": ["6 İleri Manuel"],
+            "1.6 (Benzin)": ["6 İleri Manuel", "Multidrive S (CVT)"],
+            "1.4 D-4D (Dizel)": ["6 İleri Manuel"]
+        },
+        "problems": [
+            { "title": "CVT Uğultusu", "desc": "CVT (Multidrive S) şanzımanda hızlanmalarda motorun yüksek devire çıkıp lastik kayan araba hissi vermesi.", "severity": "medium", "relatedEngine": "1.6 (Benzin)", "relatedTransmission": "Multidrive S (CVT)" },
+            { "title": "Kötü Ses Yalıtımı", "desc": "Japon otomobillerinin genel karakteristiği olarak yüksek hızlarda araç içine fazla yol ve rüzgar sesi alması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "İnce Boya Kalitesi", "desc": "Boya tabakasının ince olması sebebiyle taş izlerine ve kuş pisliğine karşı aşırı hassasiyet.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "1.4 D-4D Turbo Arızası", "desc": "1.4 dizel motorlarda turbonun yağ kaçırması veya mil aşınması, güç kaybı.", "severity": "high", "relatedEngine": "1.4 D-4D (Dizel)", "relatedTransmission": "Tümü" },
+            { "title": "Direksiyon Derisi Soyulması", "desc": "Direksiyon simidinin derisinin erken matlaşıp soyulmaya başlaması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "LPG'li Modellerde Subap Sorunu", "desc": "LPG takılan 1.33 ve 1.6 benzinli motorlarda uzun vadede subap aşınması.", "severity": "medium", "relatedEngine": "1.33 (Benzin) / 1.6 (Benzin)", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Toyota",
+        "model": "RAV4 (XA50)",
+        "years": "2018 - Günümüz",
+        "imageUrl": "images/toyota_rav4_xa50.png",
+        "engines": ["2.0 (Benzin)", "2.5 Hybrid"],
+        "transmissions": ["CVT (Direct Shift)", "e-CVT (Hybrid)"],
+        "engineTransMap": {
+            "2.0 (Benzin)": ["CVT (Direct Shift)"],
+            "2.5 Hybrid": ["e-CVT (Hybrid)"]
+        },
+        "problems": [
+            { "title": "CVT Uğultusu / Devir Çekme", "desc": "CVT şanzımanda hızlanmalarda motorun yüksek devire çıkıp gecikmeli tepki vermesi.", "severity": "medium", "relatedEngine": "2.0 (Benzin)", "relatedTransmission": "CVT (Direct Shift)" },
+            { "title": "Hybrid Batarya Fan Gürültüsü", "desc": "Hybrid modellerde batarya soğutma fanının yüksek devirde dönüp arka koltuktan uğultu gelmesi.", "severity": "low", "relatedEngine": "2.5 Hybrid", "relatedTransmission": "e-CVT (Hybrid)" },
+            { "title": "İnce Boya Kalitesi", "desc": "Toyota genel sorunu olarak boya tabakasının ince olup taş izlerine çok hassas olması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Arka Fren Gıcırtısı", "desc": "Arka fren disklerinin az kullanılmasından pas tutup fren sırasında gıcırtı ve titreşim yapması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "Dokunmatik ekranın zaman zaman donması veya Apple CarPlay bağlantısının kopması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Hyundai",
+        "model": "Elantra (CN7)",
+        "years": "2020 - Günümüz",
+        "imageUrl": "images/hyundai_elantra_cn7.png",
+        "engines": ["1.6 MPI", "1.6 T-GDI"],
+        "transmissions": ["6 İleri Manuel", "IVT (Sürekli Değişken)", "7 İleri DCT (Çift Kavrama)"],
+        "engineTransMap": {
+            "1.6 MPI": ["6 İleri Manuel", "IVT (Sürekli Değişken)"],
+            "1.6 T-GDI": ["7 İleri DCT (Çift Kavrama)"]
+        },
+        "problems": [
+            { "title": "DCT Şanzıman Sarsıntısı", "desc": "7 ileri DCT çift kavrama şanzımanda düşük hızlarda sarsıntı ve titreme.", "severity": "high", "relatedEngine": "1.6 T-GDI", "relatedTransmission": "7 İleri DCT (Çift Kavrama)" },
+            { "title": "IVT Uğultusu", "desc": "IVT şanzımanda hızlanmalarda motorun yüksek devirde kalıp uğultu yapması.", "severity": "medium", "relatedEngine": "1.6 MPI", "relatedTransmission": "IVT (Sürekli Değişken)" },
+            { "title": "Fren Disk Deformasyonu", "desc": "Orijinal fren disklerinin ısı değişimlerinden çarpılıp direksiyonda titreme vermesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Sistemi Donma", "desc": "10.25 inç dokunmatik ekranın donması veya gecikmeli tepki vermesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Ön Süspansiyon Gıcırtısı", "desc": "Soğuk havalarda ön süspansiyondan gelen gıcırtı sesleri.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Honda",
+        "model": "HR-V (RV)",
+        "years": "2015 - 2022",
+        "imageUrl": "images/honda_hrv.png",
+        "engines": ["1.5 i-VTEC", "1.5 VTEC Turbo"],
+        "transmissions": ["Manuel", "CVT"],
+        "engineTransMap": {
+            "1.5 i-VTEC": ["Manuel", "CVT"],
+            "1.5 VTEC Turbo": ["CVT"]
+        },
+        "problems": [
+            { "title": "CVT Uğultusu", "desc": "CVT şanzımanda hızlanmalarda motorun yüksek devirde kalıp belirgin uğultu yapması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "CVT" },
+            { "title": "Kötü Ses Yalıtımı", "desc": "Yüksek hızlarda kabin içine aşırı yol ve rüzgar sesi alması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "İnce Boya Kalitesi", "desc": "Boya tabakasının ince olması sebebiyle taş izlerine karşı hassasiyet.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Klima Kompresörü Sesi", "desc": "Klima devreye girdiğinde kompresörden gelen belirgin tıkırtı/vuruntu sesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "LPG'li Modellerde Subap Erimesi", "desc": "LPG takılan 1.5 i-VTEC motorlarda uzun vadede magnezyum alaşımlı subapların aşınması.", "severity": "high", "relatedEngine": "1.5 i-VTEC", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Nissan",
+        "model": "Juke (F16)",
+        "years": "2019 - Günümüz",
+        "imageUrl": "images/nissan_juke_f16.png",
+        "engines": ["1.0 DIG-T"],
+        "transmissions": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"],
+        "engineTransMap": {
+            "1.0 DIG-T": ["6 İleri Manuel", "7 İleri DCT (Çift Kavrama)"]
+        },
+        "problems": [
+            { "title": "DCT Şanzıman Titremesi", "desc": "7 ileri DCT çift kavrama şanzımanda düşük hızlarda sarsıntı ve titreme.", "severity": "high", "relatedEngine": "1.0 DIG-T", "relatedTransmission": "7 İleri DCT (Çift Kavrama)" },
+            { "title": "1.0 DIG-T Turbo Gürültüsü", "desc": "3 silindirli turbo motorun doğası gereği yüksek devirlerde belirgin gürültü yapması.", "severity": "low", "relatedEngine": "1.0 DIG-T", "relatedTransmission": "Tümü" },
+            { "title": "Arka Görüş Kısıtı", "desc": "Tasarım gereği arka cam ve C sütunlarının küçük olması sebebiyle arka görüşün kısıtlı olması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "NissanConnect ekranının zaman zaman donması veya navigasyonun kilitlenmesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Ön Süspansiyon Sesi", "desc": "Bozuk yollarda ön amortisör takozlarından gelen tıkırtı sesleri.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "BMW",
+        "model": "1 Serisi (F20/F21)",
+        "years": "2011 - 2019",
+        "imageUrl": "images/bmw_1_f20.png",
+        "engines": ["1.5 (116i/118i)", "1.6 (116i)", "2.0 (120d)"],
+        "transmissions": ["6 İleri Manuel", "8 İleri ZF Tork Konvertörlü Otomatik"],
+        "engineTransMap": {
+            "1.5 (116i/118i)": ["6 İleri Manuel", "8 İleri ZF Tork Konvertörlü Otomatik"],
+            "1.6 (116i)": ["6 İleri Manuel", "8 İleri ZF Tork Konvertörlü Otomatik"],
+            "2.0 (120d)": ["6 İleri Manuel", "8 İleri ZF Tork Konvertörlü Otomatik"]
+        },
+        "problems": [
+            { "title": "N13 Triger Zinciri Uzaması", "desc": "Makyajsız kasalardaki N13 1.6 motorlarda triger zincirinin erken uzaması, soğuk çalıştırmada çıngırak sesi ve motor hasarı riski.", "severity": "high", "relatedEngine": "1.6 (116i)", "relatedTransmission": "Tümü" },
+            { "title": "B38/B48 Su Eksiltme", "desc": "LCI (makyajlı) kasalardaki B serisi motorlarda kronik soğutma sıvısı eksiltmesi.", "severity": "medium", "relatedEngine": "1.5 (116i/118i)", "relatedTransmission": "Tümü" },
+            { "title": "Kapı Kolu Kaplama Erimesi", "desc": "Kapı içi tutamaklarının kauçuk malzemesinin sıcak havalarla eriyerek yapışkanlaşması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Direksiyon Kutusu Tıkırtısı", "desc": "Bozuk yollarda direksiyon kutusundan gelen mekanik boşluk tıkırtıları.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "LED Gündüz Farı Sararması", "desc": "Fiber optik gündüz aydınlatma halkalarının ısıdan eriyip sararması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Motor Takozu Erken Aşınması", "desc": "Motor takozlarının titreşimden dolayı erken deforme olup kabine titreşim aktarması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "BMW",
+        "model": "X1 (F48)",
+        "years": "2015 - 2022",
+        "imageUrl": "images/bmw_x1_f48.png",
+        "engines": ["1.5 (sDrive16i/18i)", "2.0 (sDrive20i)", "2.0 (sDrive18d/20d)"],
+        "transmissions": ["6 İleri Manuel", "7 İleri Steptronic (DCT)", "8 İleri Steptronic (Otomatik)"],
+        "engineTransMap": {
+            "1.5 (sDrive16i/18i)": ["6 İleri Manuel", "7 İleri Steptronic (DCT)"],
+            "2.0 (sDrive20i)": ["7 İleri Steptronic (DCT)", "8 İleri Steptronic (Otomatik)"],
+            "2.0 (sDrive18d/20d)": ["8 İleri Steptronic (Otomatik)"]
+        },
+        "problems": [
+            { "title": "7 İleri DCT Sarsıntısı", "desc": "Getrag yapımı 7 ileri çift kavrama şanzımanda düşük hızlarda sarsıntı ve titreşim.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri Steptronic (DCT)" },
+            { "title": "B38/B48 Su Eksiltme", "desc": "3 ve 4 silindirli B serisi motorlarda soğutma sıvısı eksiltmesi, termostat ve su pompası arızaları.", "severity": "medium", "relatedEngine": "1.5 (sDrive16i/18i) / 2.0 (sDrive20i)", "relatedTransmission": "Tümü" },
+            { "title": "EGR Soğutucu Arızası (Dizel)", "desc": "B47 dizel motorlarda EGR soğutucusunun delinip manifolta zarar vermesi.", "severity": "high", "relatedEngine": "2.0 (sDrive18d/20d)", "relatedTransmission": "Tümü" },
+            { "title": "Panoramik Cam Tavan Sesi", "desc": "Panoramik cam tavanlı modellerde bozuk yollarda gelen tıkırtı ve rüzgar sesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "iDrive ekranının zaman zaman donması veya gecikmeli tepki vermesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Mercedes-Benz",
+        "model": "CLA (C117)",
+        "years": "2013 - 2019",
+        "imageUrl": "images/mercedes_cla_c117.png",
+        "engines": ["1.6 Turbo (CLA 180/200)", "2.0 Turbo (CLA 250)", "1.5 Dizel (CLA 180d)"],
+        "transmissions": ["6 İleri Manuel", "7G-DCT (Çift Kavrama)"],
+        "engineTransMap": {
+            "1.6 Turbo (CLA 180/200)": ["6 İleri Manuel", "7G-DCT (Çift Kavrama)"],
+            "2.0 Turbo (CLA 250)": ["7G-DCT (Çift Kavrama)"],
+            "1.5 Dizel (CLA 180d)": ["7G-DCT (Çift Kavrama)"]
+        },
+        "problems": [
+            { "title": "7G-DCT Şanzıman Vuruntusu", "desc": "7 ileri çift kavrama şanzımanda 1-2 vites geçişlerinde sert vuruntular ve sarsıntı.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7G-DCT (Çift Kavrama)" },
+            { "title": "M270 Triger Zinciri Sesi", "desc": "1.6 turbo benzinli motorlarda triger zincirinin uzaması, soğuk çalıştırmada çıngırak sesi.", "severity": "high", "relatedEngine": "1.6 Turbo (CLA 180/200)", "relatedTransmission": "Tümü" },
+            { "title": "Panoramik Cam Tavan Tıkırtısı", "desc": "Bozuk yollarda geniş cam tavandan gelen esneme tıkırtıları ve yüksek hızlarda rüzgar sesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Aşırı Sert Süspansiyon", "desc": "AMG donanımlı versiyonlarda süspansiyonun çok sert olup en küçük çukurda bile yüksek darbe hissettirmesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "LED Gündüz Farı Sararması", "desc": "Farların içindeki LED fiber optik şeritlerin ısınmadan dolayı zamanla sararması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Kapı Kolu Krom Soyulması", "desc": "Kapı kollarındaki krom kaplamanın kabarcık yapıp soyulması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Mercedes-Benz",
+        "model": "GLA (X156)",
+        "years": "2013 - 2020",
+        "imageUrl": "images/mercedes_gla_x156.png",
+        "engines": ["1.6 Turbo (GLA 180/200)", "2.0 Turbo (GLA 250)", "2.1 CDI (GLA 200d/220d)"],
+        "transmissions": ["6 İleri Manuel", "7G-DCT (Çift Kavrama)"],
+        "engineTransMap": {
+            "1.6 Turbo (GLA 180/200)": ["6 İleri Manuel", "7G-DCT (Çift Kavrama)"],
+            "2.0 Turbo (GLA 250)": ["7G-DCT (Çift Kavrama)"],
+            "2.1 CDI (GLA 200d/220d)": ["7G-DCT (Çift Kavrama)"]
+        },
+        "problems": [
+            { "title": "7G-DCT Şanzıman Sarsıntısı", "desc": "7 ileri çift kavrama şanzımanda düşük hızlarda vuruntu ve sarsıntı.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7G-DCT (Çift Kavrama)" },
+            { "title": "M270 Triger Zinciri", "desc": "1.6 turbo benzinli motorlarda triger zincirinin uzaması, motor hasarı riski.", "severity": "high", "relatedEngine": "1.6 Turbo (GLA 180/200)", "relatedTransmission": "Tümü" },
+            { "title": "OM651 Enjektör Sızıntısı", "desc": "2.1 CDI dizel motorlarda enjektör keçelerinin sertleşip yakıt sızdırması.", "severity": "medium", "relatedEngine": "2.1 CDI (GLA 200d/220d)", "relatedTransmission": "Tümü" },
+            { "title": "Panoramik Cam Tavan Sesi", "desc": "Cam tavanlı modellerde bozuk yollarda tıkırtı ve yüksek hızda rüzgar sesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Sert Süspansiyon", "desc": "Yüksek araç yapısına rağmen sportif süspansiyon ayarının bozuk yollarda rahatsız etmesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "COMAND/Audio 20 sisteminin donması veya geri görüş kamerasının kilitlenmesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Seat",
+        "model": "Ibiza (6F)",
+        "years": "2017 - Günümüz",
+        "imageUrl": "images/seat_ibiza_6f.png",
+        "engines": ["1.0 MPI", "1.0 TSI", "1.5 TSI", "1.6 TDI"],
+        "transmissions": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+        "engineTransMap": {
+            "1.0 MPI": ["Manuel"],
+            "1.0 TSI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "1.5 TSI": ["7 İleri DSG (DQ200) Kuru Tip"],
+            "1.6 TDI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"]
+        },
+        "problems": [
+            { "title": "DSG Kavrama Titremesi", "desc": "DQ200 kuru kavramalı DSG şanzımanda düşük hızlarda titreme ve sarsıntı.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri DSG (DQ200) Kuru Tip" },
+            { "title": "Su Pompası / Termostat Arızası", "desc": "1.0 TSI motorlarda su pompasının veya termostatın erken deforme olup antifriz kaçırması.", "severity": "medium", "relatedEngine": "1.0 TSI", "relatedTransmission": "Tümü" },
+            { "title": "EPC Uyarı Lambası", "desc": "Elektronik gaz pedalı kontrolü uyarısının ani güç kesintisiyle birlikte yanması.", "severity": "high", "relatedEngine": "1.0 TSI", "relatedTransmission": "Tümü" },
+            { "title": "Trim ve Plastik Sesleri", "desc": "Kapı panelleri ve torpidodan gelen plastik tıkırtılar.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Arka Fren Disk Korozyonu", "desc": "Arka fren disklerinin çok az çalışmasından pas tutup gürültü yapması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Skoda",
+        "model": "Fabia (Mk4)",
+        "years": "2021 - Günümüz",
+        "imageUrl": "images/skoda_fabia_mk4.png",
+        "engines": ["1.0 MPI", "1.0 TSI", "1.5 TSI"],
+        "transmissions": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+        "engineTransMap": {
+            "1.0 MPI": ["Manuel"],
+            "1.0 TSI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "1.5 TSI": ["7 İleri DSG (DQ200) Kuru Tip"]
+        },
+        "problems": [
+            { "title": "DSG Kavrama Titremesi", "desc": "DQ200 kuru kavramalı DSG şanzımanda düşük hızlarda titreme.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri DSG (DQ200) Kuru Tip" },
+            { "title": "Su Pompası / Termostat Arızası", "desc": "1.0 TSI motorlarda su pompasının veya termostatın deforme olup antifriz kaçırması.", "severity": "medium", "relatedEngine": "1.0 TSI", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "Infotainment ekranının donması veya siyah ekranda kalması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Arka Süspansiyon Sertliği", "desc": "Bükülme çubuğu tipi arka süspansiyonun bozuk yollarda sert çalışması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "1.5 TSI Yağ Eksiltme", "desc": "1.5 TSI motorlarda segman kaynaklı kronik yağ tüketimi.", "severity": "medium", "relatedEngine": "1.5 TSI", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Skoda",
+        "model": "Karoq",
+        "years": "2017 - Günümüz",
+        "imageUrl": "images/skoda_karoq.png",
+        "engines": ["1.0 TSI", "1.5 TSI", "1.6 TDI", "2.0 TDI"],
+        "transmissions": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip", "7 İleri DSG (Islak)"],
+        "engineTransMap": {
+            "1.0 TSI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "1.5 TSI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "1.6 TDI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "2.0 TDI": ["Manuel", "7 İleri DSG (Islak)"]
+        },
+        "problems": [
+            { "title": "DSG Kavrama & Mekatronik", "desc": "Kuru kavramalı DQ200 DSG'de düşük hızlarda titreme ve kavrama aşınması.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "7 İleri DSG (DQ200) Kuru Tip" },
+            { "title": "Su Pompası / Termostat", "desc": "TSI motorlarda plastik su pompası ve termostatın deforme olup antifriz kaçırması.", "severity": "medium", "relatedEngine": "1.0 TSI / 1.5 TSI", "relatedTransmission": "Tümü" },
+            { "title": "1.5 TSI Yağ Eksiltme", "desc": "1.5 TSI Evo motorlarda segman kaynaklı kronik yağ tüketimi.", "severity": "medium", "relatedEngine": "1.5 TSI", "relatedTransmission": "Tümü" },
+            { "title": "Direksiyon Kutusu Tıkırtısı", "desc": "Bozuk yollarda direksiyon kutusundan gelen boşluk tıkırtıları.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Panoramik Cam Tavan Su Alma", "desc": "Cam tavanlı modellerde tahliye kanallarının tıkanmasıyla araç içine su sızması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "Infotainment ekranının donması veya sürüş sırasında resetlenmesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Volvo",
+        "model": "XC40",
+        "years": "2017 - Günümüz",
+        "imageUrl": "images/volvo_xc40.png",
+        "engines": ["1.5 T3", "2.0 T4/T5", "2.0 D3/D4"],
+        "transmissions": ["6 İleri Manuel", "8 İleri Geartronic Otomatik"],
+        "engineTransMap": {
+            "1.5 T3": ["6 İleri Manuel", "8 İleri Geartronic Otomatik"],
+            "2.0 T4/T5": ["8 İleri Geartronic Otomatik"],
+            "2.0 D3/D4": ["8 İleri Geartronic Otomatik"]
+        },
+        "problems": [
+            { "title": "T3 Motor Titreşimi", "desc": "3 silindirli 1.5 T3 motorun doğası gereği rölanti ve düşük devirlerde belirgin titreşim hissettirmesi.", "severity": "medium", "relatedEngine": "1.5 T3", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Sistemi Yavaşlığı", "desc": "Sensus/Google OS multimedya sisteminin yavaş çalışması, donması veya gecikmeli tepki vermesi.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Pilot Assist Kalibrasyon Hatası", "desc": "Yarı otonom sürüş asistanının zaman zaman kalibrasyon hatası verip devre dışı kalması.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Ön Amortisör Sesi", "desc": "Ön amortisör üst takozlarından kasis ve çukurlarda gelen tok tıkırtı sesleri.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "AdBlue Sistemi Arızası (Dizel)", "desc": "Dizel modellerde AdBlue enjektörünün tıkanması, motor arıza lambası ve güç kısıtlaması.", "severity": "high", "relatedEngine": "2.0 D3/D4", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "MG",
+        "model": "ZS",
+        "years": "2020 - Günümüz",
+        "imageUrl": "images/mg_zs.png",
+        "engines": ["1.5 (Atmosferik)", "1.0 Turbo"],
+        "transmissions": ["Manuel", "6 İleri Otomatik", "CVT"],
+        "engineTransMap": {
+            "1.5 (Atmosferik)": ["Manuel", "CVT"],
+            "1.0 Turbo": ["6 İleri Otomatik"]
+        },
+        "problems": [
+            { "title": "CVT Şanzıman Uğultusu", "desc": "CVT şanzımanda hızlanmalarda motorun yüksek devirde kalıp belirgin uğultu yapması.", "severity": "medium", "relatedEngine": "1.5 (Atmosferik)", "relatedTransmission": "CVT" },
+            { "title": "İç Mekan Plastik Kalitesi", "desc": "Bütçe segmenti plastik kalitesi sebebiyle torpido ve kapı panellerinden gelen tıkırtılar ve gıcırtılar.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Yedek Parça Temini", "desc": "Çin menşeli marka olarak kaza veya arıza sonrası yedek parça bekleme sürelerinin uzun olması.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya Donması", "desc": "Dokunmatik ekranın donması veya navigasyonun kilitlenmesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "İnce Boya Kalitesi", "desc": "Boya tabakasının ince olması sebebiyle taş izlerine karşı hassasiyet.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Süspansiyon Sertliği", "desc": "Süspansiyon kalibrasyonunun bozuk Türkiye yollarında sert çalışması.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" }
+        ]
+    },
+    {
+        "brand": "Cupra",
+        "model": "Formentor",
+        "years": "2020 - Günümüz",
+        "imageUrl": "images/cupra_formentor.png",
+        "engines": ["1.5 TSI", "2.0 TSI", "1.5 e-TSI"],
+        "transmissions": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip", "7 İleri DSG (Islak)"],
+        "engineTransMap": {
+            "1.5 TSI": ["Manuel", "7 İleri DSG (DQ200) Kuru Tip"],
+            "2.0 TSI": ["7 İleri DSG (Islak)"],
+            "1.5 e-TSI": ["7 İleri DSG (DQ200) Kuru Tip"]
+        },
+        "problems": [
+            { "title": "DSG Kavrama Titremesi (DQ200)", "desc": "1.5 TSI modellerde kuru kavramalı DSG'de düşük hızlarda titreme ve kavrama aşınması.", "severity": "high", "relatedEngine": "1.5 TSI / 1.5 e-TSI", "relatedTransmission": "7 İleri DSG (DQ200) Kuru Tip" },
+            { "title": "1.5 TSI Yağ Eksiltme", "desc": "1.5 TSI motorlarda segman yapısından kaynaklı kronik yağ tüketimi.", "severity": "medium", "relatedEngine": "1.5 TSI / 1.5 e-TSI", "relatedTransmission": "Tümü" },
+            { "title": "Travel Assist Hatası", "desc": "Direksiyon simidindeki kapasitif sensörlerin arızalanması, sürekli uyarı vermesi.", "severity": "high", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Multimedya (MIB3) Donması", "desc": "Bilgi eğlence ekranının donması veya kendi kendine resetlenmesi.", "severity": "low", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Sert Süspansiyon", "desc": "Sportif süspansiyon ayarı sebebiyle Türkiye yollarında konfor düşüklüğü.", "severity": "medium", "relatedEngine": "Tümü", "relatedTransmission": "Tümü" },
+            { "title": "Su Pompası / Termostat Arızası", "desc": "TSI motorlarda plastik su pompası ve termostatın deforme olup antifriz kaçırması.", "severity": "medium", "relatedEngine": "1.5 TSI / 1.5 e-TSI", "relatedTransmission": "Tümü" }
+        ]
     }
 ]
     ;
