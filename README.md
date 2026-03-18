@@ -79,19 +79,6 @@ car-problems-site/
 
 ---
 
-## 🤝 Katkıda Bulunma
-
-Yeni araç/model eklemek veya mevcut verileri güncellemek isterseniz:
-
-1. Bu repo'yu forklayın
-2. Yeni bir branch oluşturun (`git checkout -b yeni-arac-ekleme`)
-3. `data.js` dosyasına aracı ekleyin (mevcut format örneğini takip edin)
-4. Commit atın (`git commit -m 'Yeni araç: [Marka Model] eklendi'`)
-5. Branch'i pushlayın (`git push origin yeni-arac-ekleme`)
-6. Pull Request açın
-
----
-
 ## ⚠️ Feragatname
 
 Bu platform, araç sahiplerinin ve ustaların tecrübelerine dayanan verileri derlemektedir. **Kesinlik ifade etmez.** Araç satın alma kararlarınızda profesyonel bir mekanikere danışmanız önerilir.
