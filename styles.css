@@ -1610,9 +1610,12 @@ select, #searchInput, .compare-bar,
         border-radius: 16px;
     }
 
+    .modal-header {
+        padding-right: 2.5rem;
+    }
+
     .modal-header h2 {
         font-size: 1.5rem;
-        padding-right: 2rem;
     }
 
     .modal-car-image {
